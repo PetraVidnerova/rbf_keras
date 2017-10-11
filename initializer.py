@@ -2,7 +2,11 @@ from keras.initializers import Initializer
 import numpy as np 
 
 class InitFromFile(Initializer):
+    """ Initialize the weights by loading from file.
 
+    # Arguments
+        filename: name of file, should by .npy file 
+    """
     def __init__(self, filename):
         self.filename = filename 
 

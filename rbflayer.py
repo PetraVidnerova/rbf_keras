@@ -5,7 +5,13 @@ from keras.initializers import RandomUniform, Initializer, Orthogonal, Constant
 import numpy as np
 
 class InitCentersRandom(Initializer):
+    """ Initializer for initialization of centers of RBF network
+        as random samples from the given data set.
 
+    # Arguments
+        X: matrix, dataset to choose the centers from (random rows 
+          are taken as centers)
+    """
     def __init__(self, X):
         self.X = X 
 
@@ -16,7 +22,26 @@ class InitCentersRandom(Initializer):
 
         
 class RBFLayer(Layer):
+    """ Layer of Gaussian RBF units. 
 
+    # Example
+ 
+    ```python
+        model = Sequential()
+        model.add(RBFLayer(10,
+                           initializer=InitCentersRandom(X), 
+                           betas=1.0,
+                           input_shape=(1,)))
+        model.add(Dense(1))
+    ```
+    
+
+    # Arguments
+        output_dim: number of hidden units (i.e. number of outputs of the layer)
+        initializer: instance of initiliazer to initialize centers
+        betas: float, initial value for betas 
+
+    """
     def __init__(self, output_dim, initializer=None, betas=0.01, **kwargs):
         self.output_dim = output_dim
         self.init_betas = betas 
