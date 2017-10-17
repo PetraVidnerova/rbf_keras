@@ -42,7 +42,7 @@ class RBFLayer(Layer):
         betas: float, initial value for betas 
 
     """
-    def __init__(self, output_dim, initializer=None, betas=0.01, **kwargs):
+    def __init__(self, output_dim, initializer=None, betas=1.0, **kwargs):
         self.output_dim = output_dim
         self.init_betas = betas 
         if not initializer:
