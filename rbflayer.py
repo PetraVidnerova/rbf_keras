@@ -59,7 +59,7 @@ class RBFLayer(Layer):
                                        initializer=self.initializer,
                                        trainable=True)
         self.betas = self.add_weight(name='betas',
-                                     shape=(self.output_dim),
+                                     shape=(self.output_dim,),
                                      initializer=Constant(value=self.init_betas),
                                      #initializer='ones',
                                      trainable=True)
@@ -69,7 +69,7 @@ class RBFLayer(Layer):
     def call(self, x):
 
         C = K.expand_dims(self.centers)
-        H = (C-x.T).T
+        H = K.transpose(C-K.transpose(x))
         return K.exp( -self.betas * K.sum(H**2, axis=1))
         
         #C = self.centers[np.newaxis, :, :]
