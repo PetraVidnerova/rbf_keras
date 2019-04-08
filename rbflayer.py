@@ -18,7 +18,7 @@ class InitCentersRandom(Initializer):
     def __call__(self, shape, dtype=None):
         assert shape[1] == self.X.shape[1]
         idx = np.random.randint(self.X.shape[0], size=shape[0])
-        return self.X[idx,:]
+        return self.X[idx, :]
 
         
 class RBFLayer(Layer):
