@@ -15,11 +15,11 @@ def load_data():
 
 if __name__ == "__main__":
 
-    X, y = load_data() 
+    X, y = load_data()
 
     model = Sequential()
     rbflayer = RBFLayer(10,
-                        initializer=InitCentersRandom(X), 
+                        initializer=InitCentersRandom(X),
                         betas=2.0,
                         input_shape=(1,))
     model.add(rbflayer)
