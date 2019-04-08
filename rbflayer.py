@@ -4,6 +4,7 @@ from keras.engine.topology import Layer
 from keras.initializers import RandomUniform, Initializer, Orthogonal, Constant
 import numpy as np
 
+
 class InitCentersRandom(Initializer):
     """ Initializer for initialization of centers of RBF network
         as random samples from the given data set.
