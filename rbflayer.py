@@ -1,4 +1,4 @@
-import random 
+import random
 from keras import backend as K
 from keras.engine.topology import Layer
 from keras.initializers import RandomUniform, Initializer, Orthogonal, Constant
@@ -10,11 +10,11 @@ class InitCentersRandom(Initializer):
         as random samples from the given data set.
 
     # Arguments
-        X: matrix, dataset to choose the centers from (random rows 
+        X: matrix, dataset to choose the centers from (random rows
           are taken as centers)
     """
     def __init__(self, X):
-        self.X = X 
+        self.X = X
 
     def __call__(self, shape, dtype=None):
         assert shape[1] == self.X.shape[1]
@@ -23,14 +23,14 @@ class InitCentersRandom(Initializer):
 
         
 class RBFLayer(Layer):
-    """ Layer of Gaussian RBF units. 
+    """ Layer of Gaussian RBF units.
 
     # Example
  
     ```python
         model = Sequential()
         model.add(RBFLayer(10,
-                           initializer=InitCentersRandom(X), 
+                           initializer=InitCentersRandom(X),
                            betas=1.0,
                            input_shape=(1,)))
         model.add(Dense(1))
@@ -40,22 +40,22 @@ class RBFLayer(Layer):
     # Arguments
         output_dim: number of hidden units (i.e. number of outputs of the layer)
         initializer: instance of initiliazer to initialize centers
-        betas: float, initial value for betas 
+        betas: float, initial value for betas
 
     """
     def __init__(self, output_dim, initializer=None, betas=1.0, **kwargs):
         self.output_dim = output_dim
-        self.init_betas = betas 
+        self.init_betas = betas
         if not initializer:
             self.initializer = RandomUniform(0.0, 1.0)
             #self.initializer = Orthogonal()
         else:
-            self.initializer = initializer 
+            self.initializer = initializer
         super(RBFLayer, self).__init__(**kwargs)
 
     def build(self, input_shape):
         
-        self.centers = self.add_weight(name='centers', 
+        self.centers = self.add_weight(name='centers',
                                        shape=(self.output_dim, input_shape[1]),
                                        initializer=self.initializer,
                                        trainable=True)
@@ -65,7 +65,7 @@ class RBFLayer(Layer):
                                      #initializer='ones',
                                      trainable=True)
             
-        super(RBFLayer, self).build(input_shape)  
+        super(RBFLayer, self).build(input_shape)
 
     def call(self, x):
 
@@ -78,7 +78,7 @@ class RBFLayer(Layer):
 
         #diffnorm = K.sum((C-X)**2, axis=-1)
         #ret = K.exp( - self.betas * diffnorm)
-        #return ret 
+        #return ret
 
     def compute_output_shape(self, input_shape):
         return (input_shape[0], self.output_dim)
