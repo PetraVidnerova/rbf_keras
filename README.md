@@ -1,5 +1,5 @@
 # rbf_keras
-RBF layer for Keras
+RBF layer for [Keras](https://keras.io/)
 
 You need rbflayer.py to use RBF layers in keras. See test.py for
 **very simple** example.
