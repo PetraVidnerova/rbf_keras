@@ -33,6 +33,16 @@ or using KMeans clustering for RBF centers
                       input_shape=(num_inputs,))
 ``` 
 
+ Because you have created Keras model with a custom layer, you need to take it into 
+ account if you need to save it to file and load it.
+ Saving is no problem:
+ ```
+ model.save("some_fency_file_name.h5")
+ ```
+ but while loading you have to specify your custom object RBFLayer:
+ ```
+ rbfnet = load_model("some_fency_file_name.h5", custom_objects={'RBFLayer': RBFLayer})
+ ```
 
 ## See also:
 **Issue [#1](https://github.com/PetraVidnerova/rbf_keras/issues/1)**:
