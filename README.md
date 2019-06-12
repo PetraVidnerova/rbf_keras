@@ -2,9 +2,12 @@
 RBF layer for Keras
 
 You need rbflayer.py to use RBF layers in keras. See test.py for
-very simple example.
+**very simple** example.
 
 Feel free to use or modify the code. 
+
+## Requirements:
+ Keras, Tensorflow, Scikit-learn, optionally Matplotlib (only for test.py)
 
 ## Usage:
 
