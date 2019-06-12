@@ -1,4 +1,6 @@
 # rbf_keras
+Petra Vidnerová, The Czech Academy of Sciences, Institute of Computer Science
+
 RBF layer for [Keras](https://keras.io/)
 
 You need rbflayer.py to use RBF layers in keras. See test.py for
@@ -50,4 +52,8 @@ For hint how to implement different radii for different dimensions.
 
 ## Contact:
 If you need help, do not hesitate to contact me via petra@cs.cas.cz or write an Issue.
+
+## Acknowledgement: 
+This work  was partially supported by the Czech Grant Agency grant 18-23827S 
+and institutional support of the Institute of Computer Science RVO 67985807.
 
