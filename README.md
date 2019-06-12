@@ -1,5 +1,5 @@
 # rbf_keras
-Author: Petra Vidnerová, The Czech Academy of Sciences, Institute of Computer Science
+*Author: Petra Vidnerová, The Czech Academy of Sciences, Institute of Computer Science*
 
 
 RBF layer for [Keras](https://keras.io/)
