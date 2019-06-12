@@ -13,6 +13,7 @@ def load_data():
     y = data[:, -1:]
     return X, y
 
+
 if __name__ == "__main__":
 
     X, y = load_data()
@@ -37,14 +38,13 @@ if __name__ == "__main__":
 
     print(rbflayer.get_weights())
 
-    
     plt.plot(X, y_pred)
     plt.plot(X, y)
     plt.plot([-1, 1], [0, 0], color='black')
     plt.xlim([-1, 1])
-    
+
     centers = rbflayer.get_weights()[0]
     widths = rbflayer.get_weights()[1]
     plt.scatter(centers, np.zeros(len(centers)), s=20*widths)
-    
+
     plt.show()
