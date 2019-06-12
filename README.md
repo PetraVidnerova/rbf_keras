@@ -37,3 +37,7 @@ or using KMeans clustering for RBF centers
 ## See also:
 **Issue [#1](https://github.com/PetraVidnerova/rbf_keras/issues/1)**:
 For hint how to implement different radii for different dimensions.
+
+## Contact:
+If you need help, do not hesitate to contact me via petra@cs.cas.cz or write an Issue.
+
