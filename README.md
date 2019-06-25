@@ -55,7 +55,7 @@ For hint how to implement different radii for different dimensions.
 If you need help, do not hesitate to contact me via petra@cs.cas.cz or write an Issue.
 
 ## How to cite:
-In case you use this RBF layer for any experiments that result in publication, please consider citing it.
+In case you use this RBF layer for any experiments that result in publication, please consider citing it. Thanks :heart:
 
 *Vidnerová, Petra. RBF-Keras: RBF vrstva pro knihovnu Keras. 2019. 
 Available at https://github.com/PetraVidnerova/rbf_keras*
