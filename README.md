@@ -60,6 +60,11 @@ In case you use this RBF layer for any experiments that result in publication, p
 *Vidnerová, Petra. RBF-Keras: RBF-Keras: an RBF Layer for Keras Library. 2019. 
 Available at https://github.com/PetraVidnerova/rbf_keras*
 
+**Thanks** to the author of the very first citation:   Lukas Brausch, et al. Towards a wearable low-cost ultrasound device for classification of muscle activity and muscle fatigue. 2019 
+[doi:10.1145/3341163.3347749](https://doi.org/10.1145/3341163.3347749)
+
+
+
 ## Acknowledgement: 
 This work  was partially supported by the Czech Grant Agency grant 18-23827S 
 and institutional support of the Institute of Computer Science RVO 67985807.
