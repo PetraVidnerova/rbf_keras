@@ -57,7 +57,7 @@ If you need help, do not hesitate to contact me via petra@cs.cas.cz or write an 
 ## How to cite:
 In case you use this RBF layer for any experiments that result in publication, please consider citing it. Thanks :heart:
 
-*Vidnerová, Petra. RBF-Keras: RBF vrstva pro knihovnu Keras. 2019. 
+*Vidnerová, Petra. RBF-Keras: RBF-Keras: an RBF Layer for Keras Library. 2019. 
 Available at https://github.com/PetraVidnerova/rbf_keras*
 
 ## Acknowledgement: 
